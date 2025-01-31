@@ -1,15 +1,11 @@
-x = 1    # int
-y = 2.8  # float
-z = 1j   # complex
-
 #convert from int to float:
-a = float(x)
+a = float(1)
 
 #convert from float to int:
-b = int(y)
+b = int(2.8)
 
 #convert from int to complex:
-c = complex(x)
+c = complex(1)
 
 print(a)
 print(b)
