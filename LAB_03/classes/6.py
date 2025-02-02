@@ -5,14 +5,9 @@ def isNumPrime(x):
         if i != 1 and x%i == 0:
             return 0
     return True
-def listOfPrime(cinlist):
-    primelist = []
-    for x in cinlist:
-        if isNumPrime(int(x)):
-            primelist.append(x)
-    return primelist
-cinlist = list(input("Enter numbers separated by spaces: ").split())
+cinlist = input("Enter numbers separated by spaces: ").split()
+cinlist = [int(item) for item in cinlist]
 prime_numbers = list(filter(lambda x: isNumPrime(x), cinlist))
 print("Prime numbers: ")
-for x in listOfPrime(cinlist):
+for x in prime_numbers:
     print (x)
