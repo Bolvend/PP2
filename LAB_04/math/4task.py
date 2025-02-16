@@ -1,8 +1,6 @@
-def count_squared_up_to(a , b): 
-    while a <= b:
-        yield a*a
-        a += 1
-a = int(input("Write start integer:"))
-b = int(input("Write end integer:"))
-for number in count_squared_up_to(a , b):
-    print(number)
+import math
+
+Base1 = int(input("Input Length of base: "))
+Height = int(input("Input Height: "))
+
+print("Area: {:.2f}".format(Base1*Height))
