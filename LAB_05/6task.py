@@ -1,0 +1,16 @@
+import re
+
+txt_file = 'lol.txt'
+
+with open(txt_file, 'r') as file:
+    lines = file.readlines()
+
+pattern = r"[ ,.]"
+
+matching_lines = []
+
+for line in lines:
+    line = line.strip()
+    newline = re.sub(pattern, ":", line)
+    print (newline)
+
