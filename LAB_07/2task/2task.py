@@ -30,6 +30,9 @@ def play_track(index):
 
 play_track(current_track_index)
 
+# Устанавливаем событие, которое сработает при окончании песни
+pygame.mixer.music.set_endevent(pygame.USEREVENT)
+
 paused = False
 
 font = pygame.font.Font(None, 48)
@@ -39,6 +42,11 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        elif event.type == pygame.USEREVENT:
+            current_track_index = (current_track_index + 1) % len(tracks)
+            play_track(current_track_index)
+            paused = False
+            
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 if current_image == play_image:
