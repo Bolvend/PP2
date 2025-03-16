@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Музыкальный плеер")
+pygame.display.set_caption("music player")
 
 def scale_image(image):
     original_width, original_height = image.get_size()
